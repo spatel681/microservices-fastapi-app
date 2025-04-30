@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# SQLite database files
+*.db
+
+# Virtual environments
+venv/
+.env/
+
+# Docker files
+*.pid
+*.log
+
+# Editor files
+.vs/
+.vscode/
+.idea/
+*.swp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Python dependency cache
+pip-wheel-metadata/
+__pypackages__/
+
+# Test cache
+htmlcov/
+.tox/
+coverage.xml
+.pytest_cache/
+
+# Ignore build artifacts
+build/
+dist/
+*.egg-info/
