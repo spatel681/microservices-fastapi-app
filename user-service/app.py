@@ -1,10 +1,19 @@
 from codecs import StreamReaderWriter
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import sqlite3
 
 app = FastAPI(title="User Service")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or use ["http://localhost:3000"] for tighter security
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 conn = sqlite3.connect('users.db', check_same_thread=False)
 cursor = conn.cursor()

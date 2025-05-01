@@ -4,7 +4,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>497d407b-dc3d-482a-a3d8-f7f3c9362251</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>microservices_app.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +22,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="microservices_app.py" />
     <Compile Include="order-service\app.py" />
     <Compile Include="product-service\app.py" />
     <Compile Include="user-service\app.py" />
@@ -33,10 +33,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="docker-compose.yml" />
+    <Content Include=".gitignore" />
+    <Content Include="LICENSE" />
     <Content Include="order-service\Dockerfile" />
     <Content Include="order-service\requirements.txt" />
     <Content Include="product-service\Dockerfile" />
     <Content Include="product-service\requirements.txt" />
+    <Content Include="README.md" />
     <Content Include="user-service\Dockerfile" />
     <Content Include="user-service\requirements.txt" />
   </ItemGroup>

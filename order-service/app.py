@@ -1,11 +1,20 @@
 from site import USER_SITE
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import sqlite3
 import requests
 
 app = FastAPI(title="Order Service")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or use ["http://localhost:3000"] for tighter security
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 conn = sqlite3.connect('orders.db', check_same_thread=False)
 cursor = conn.cursor()
